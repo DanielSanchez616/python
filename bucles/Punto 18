@@ -1,0 +1,65 @@
+# Punto 18 - Ejercicio 1: Números de 0 a 10 con while
+
+contador = 0
+while contador <= 10:
+    print(contador)
+    contador = contador + 1
+
+# Punto 18 - Ejercicio 2: Números de 10 a 0 con while
+
+contador = 10
+while contador >= 0:
+    print(contador)
+    contador = contador - 1
+
+# Punto 18 - Ejercicio 3: Sumar hasta que la suma sea >= 1000
+
+suma = 0
+contador = 1
+
+while suma < 1000:
+    suma = suma + contador
+    contador = contador + 1
+
+print('Se sumó desde el 1 hasta el', contador - 1)
+print('La suma total es:', suma)
+
+# Punto 18 - Ejercicio 4: Repetir hasta introducir 'n'
+
+while True:
+    respuesta = input('¿Quieres continuar? (S/n): ')
+    if respuesta.lower() == 'n':
+        break
+    print('Continuando...')
+
+print('Programa finalizado')
+
+# Punto 18 - Ejercicio 5: Sucesión de Fibonacci hasta 1000
+
+a = 0
+b = 1
+
+while b <= 1000:
+    print(b)
+    suma = a + b
+    a = b
+    b = suma
+
+# Punto 18 - Ejercicio 6: Adivinar número secreto
+
+import random
+
+numero_secreto = random.randint(1, 100)
+
+while True:
+    numero = input('Adivina el número (1-100): ')
+    numero = int(numero)
+    
+    if numero > numero_secreto:
+        print('Demasiado alto')
+    elif numero < numero_secreto:
+        print('Demasiado bajo')
+    else:
+        print('¡Acertaste!')
+        print('El número era:', numero_secreto)
+        break
