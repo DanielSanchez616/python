@@ -1,0 +1,35 @@
+# Punto 14 - Ejercicio 1: Números pares entre 2 y 20
+
+for num in range(2, 21, 2):
+    print(num)
+# Punto 14 - Ejercicio 2: Números impares entre 1 y 19
+
+for num in range(1, 20, 2):
+    print(num)
+
+# Punto 14 - Ejercicio 3: Cuenta atrás de 10 a 0
+
+for num in range(10, -1, -1):
+    print(num)
+
+# Punto 14 - Ejercicio 4: Listado 50, 45, 40, 35, 30, 25, 20
+
+for num in range(50, 15, -5):
+    print(num)
+
+# Punto 14 - Ejercicio 5: Listado -50, -45, -40, -35, -30, -25, -20
+
+for num in range(-50, -15, 5):
+    print(num)
+
+# Punto 14 - Ejercicio 6: Suma de los primeros n números impares
+
+num = input('Introduce cuántos impares sumaremos: ')
+num = int(num)
+
+suma = 0
+for i in range(1, num*2, 2):
+    suma = suma + i
+
+print('La suma de los', num, 'primeros impares es igual a', suma)
+print('El cuadrado de', num, 'es igual a', num*num)
