@@ -1,0 +1,59 @@
+# Punto 16 - Ejercicio 1: Cuenta atrás de 10 a 1, parar en 5
+
+for num in range(10, 0, -1):
+    print(num)
+    if num == 5:
+        break
+
+# Punto 16 - Ejercicio 2: Contraseña con 4 intentos
+
+password = '1234'
+acceso_autorizado = False
+
+for intento in range(4):
+    entrada = input('Introduce la contraseña: ')
+    if entrada == password:
+        print('Acceso autorizado')
+        acceso_autorizado = True
+        break
+
+if not acceso_autorizado:
+    print('Acceso no autorizado')
+
+# Punto 16 - Ejercicio 3: Escribir frase hasta letra 30
+
+frase = 'En un lugar de la Mancha, de cuyo nombre no quiero acordarme'
+contador = 0
+
+for letra in frase:
+    print(letra, end='')
+    contador = contador + 1
+    if contador == 30:
+        break
+
+print()  # Nueva línea
+
+# Punto 16 - Ejercicio 4: Sumar de 1 a 100 hasta que suma > 1000
+
+suma = 0
+maximo = 1000
+
+for num in range(1, 101):
+    suma = suma + num
+    if suma > maximo:
+        print('Suma hasta el número:', num)
+        print('Resultado de la suma:', suma)
+        break
+
+# Punto 16 - Ejercicio 5: Verificar si un número es primo
+
+num = input('Escribe un número: ')
+num = int(num)
+
+for divisor in range(2, num):
+    if num % divisor == 0:
+        print(num, 'no es un número primo')
+        print('Es divisible por', divisor)
+        break
+else:
+    print(num, 'es un número primo')
