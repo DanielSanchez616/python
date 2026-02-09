@@ -1,0 +1,116 @@
+>>> # Ejercicio 1: Recibir un dato y elevarlo al cuadrado
+... 
+... numero = float(input("Ingrese un número: "))
+... cuadrado = numero ** 2
+... 
+>>> # Ejercicio 2: Recibe nombre y edad y saluda indicando año de nacimiento
+... 
+... nombre = input("Ingrese su nombre: ")
+... edad = int(input("Ingrese su edad: "))
+... 
+... anio_actual = 2026
+... anio_nacimiento = anio_actual - edad
+... 
+>>> # Ejercicio 3: Recibir nombre de un producto y precio sin IVA. Devuelve precio con IVA
+... 
+... nombre_producto = input("Ingrese el nombre del producto: ")
+... precio_sin_iva = float(input("Ingrese el precio sin IVA: "))
+... 
+... IVA = 0.21  # 21% de IVA
+... precio_con_iva = precio_sin_iva * (1 + IVA)
+... 
+... print(f"\nProducto: {nombre_producto}")
+>>> # Ejercicio 4: Recibir corriente y resistencia y devolver voltaje (V=IR)
+... 
+... corriente = float(input("Ingrese la corriente (I) en amperios: "))
+... resistencia = float(input("Ingrese la resistencia (R) en ohmios: "))
+... 
+... # Ley de Ohm: V = I * R
+... voltaje = corriente * resistencia
+... 
+>>> # Ejercicio 5: Recibe precio, cantidad, costo fijo y costo variable por pieza y devuelve el beneficio
+... 
+... precio = float(input("Ingrese el precio de venta por unidad: "))
+... cantidad = int(input("Ingrese la cantidad vendida: "))
+... costo_fijo = float(input("Ingrese el costo fijo: "))
+... costo_variable = float(input("Ingrese el costo variable por pieza: "))
+... 
+... # Beneficio = Ingresos - Costos Totales
+... ingresos = precio * cantidad
+... costos_totales = costo_fijo + (costo_variable * cantidad)
+... beneficio = ingresos - costos_totales
+... 
+... print(f"\nIngresos totales: {ingresos:.2f}€")
+... print(f"Costos totales: {costos_totales:.2f}€")
+>>> # Ejercicio 6: Recibir dos números y realizar operaciones: suma, resta, div, mult, pot, raíz y módulo
+... 
+... import math
+... 
+... num1 = float(input("Ingrese el primer número: "))
+... num2 = float(input("Ingrese el segundo número: "))
+... 
+... print("\n--- RESULTADOS ---")
+... print(f"Suma: {num1 + num2}")
+... print(f"Resta: {num1 - num2}")
+... print(f"Multiplicación: {num1 * num2}")
+... 
+... if num2 != 0:
+...     print(f"División: {num1 / num2}")
+... else:
+...     print("División: No se puede dividir entre cero")
+... 
+... print(f"Potencia ({num1}^{num2}): {num1 ** num2}")
+... print(f"Raíz cuadrada de {num1}: {math.sqrt(num1)}")
+... print(f"Raíz cuadrada de {num2}: {math.sqrt(num2)}")
+... 
+... if num2 != 0:
+...     print(f"Módulo ({num1} % {num2}): {num1 % num2}")
+... else:
+>>> Ejercicio7 salario · PY
+... Copiar
+... 
+... # Ejercicio 7: Calcular salario semanal (15€/hora normal, 20€/hora extra, 40 horas normales)
+... 
+... horas_extras = float(input("Ingrese el número de horas extras trabajadas: "))
+... 
+... # Constantes
+... HORAS_NORMALES = 40
+... PAGO_HORA_NORMAL = 15
+... PAGO_HORA_EXTRA = 20
+... 
+... # Cálculo del salario
+... salario_normal = HORAS_NORMALES * PAGO_HORA_NORMAL
+... salario_extras = horas_extras * PAGO_HORA_EXTRA
+... salario_total = salario_normal + salario_extras
+... 
+... print("\n--- DESGLOSE SALARIAL ---")
+... print(f"Horas normales (40h): {salario_normal}€")
+... print(f"Horas extras ({horas_extras}h): {salario_extras}€")
+... print(f"Salario semanal total: {salario_total}€")
+>>> # Ejercicio 8: Solicitar coordenadas de dos puntos y devolver pendiente y ecuación de la recta
+... 
+... print("Ingrese las coordenadas del primer punto:")
+... x1 = float(input("x1: "))
+... y1 = float(input("y1: "))
+... 
+... print("\nIngrese las coordenadas del segundo punto:")
+... x2 = float(input("x2: "))
+... y2 = float(input("y2: "))
+... 
+... # Verificar que no sea una recta vertical
+... if x2 == x1:
+...     print(f"\nLa recta es vertical: x = {x1}")
+... else:
+...     # Calcular pendiente: m = (y2 - y1) / (x2 - x1)
+...     pendiente = (y2 - y1) / (x2 - x1)
+...     
+...     # Calcular intercepto: b = y1 - m*x1
+...     intercepto = y1 - pendiente * x1
+...     
+...     print("\n--- ECUACIÓN DE LA RECTA ---")
+...     print(f"Pendiente (m): {pendiente:.2f}")
+...     
+...     if intercepto >= 0:
+...         print(f"Ecuación: y = {pendiente:.2f}x + {intercepto:.2f}")
+...     else:
+...         print(f"Ecuación: y = {pendiente:.2f}x - {abs(intercepto):.2f}")
