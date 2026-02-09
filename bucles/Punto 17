@@ -1,0 +1,50 @@
+# Punto 17 - Ejercicio 1: Verificar si un número es producto de dos números del 1 al 10
+
+num = input('Escribe un número: ')
+num = int(num)
+
+for i in range(1, 11):
+    for j in range(1, 11):
+        if i * j == num:
+            print('El número', num, 'es igual a', i, 'x', j)
+
+# Punto 17 - Ejercicio 2: Triángulo de asteriscos
+
+for i in range(1, 11):
+    for j in range(i):
+        print('*', end='')
+    print()  # Nueva línea
+
+# Punto 17 - Ejercicio 3: Triángulo de números
+
+for i in range(1, 10):
+    for j in range(i):
+        print(i, end='')
+    print()  # Nueva línea
+
+# Punto 17 - Ejercicio 4: Triángulo invertido de asteriscos
+
+for i in range(10, 0, -1):
+    for j in range(i):
+        print('*', end='')
+    print()  # Nueva línea
+
+# Punto 17 - Ejercicio 5: Patrón de ajedrez
+
+for i in range(10):
+    for j in range(10):
+        if (i + j) % 2 == 0:
+            print('*', end=' ')
+        else:
+            print(' ', end=' ')
+    print()  # Nueva línea
+
+# Punto 17 - Ejercicio 6: Patrón divisible por 3
+
+for i in range(10):
+    for j in range(10):
+        if (i + j) % 3 == 0:
+            print('*', end=' ')
+        else:
+            print(' ', end=' ')
+    print()  # Nueva línea
