@@ -1,0 +1,67 @@
+# Punto 15 - Ejercicio 1: Números del 1 al 20 excepto múltiplos de 5
+
+for num in range(1, 21):
+    if num % 5 == 0:
+        continue
+    print(num)
+
+# Punto 15 - Ejercicio 2: Números del 1 al 10 excepto 4 y 7
+
+for num in range(1, 11):
+    if num == 4 or num == 7:
+        continue
+    print(num)
+
+# Punto 15 - Ejercicio 3: Suma del 1 al 100 excepto múltiplos de 3
+
+suma = 0
+for num in range(1, 101):
+    if num % 3 == 0:
+        continue
+    suma = suma + num
+
+print('La suma es:', suma)
+print('(El resultado debe ser 3367)')
+
+# Punto 15 - Ejercicio 4: Contar números del 1 al 100 sin múltiplos de 3 y 7
+
+contador = 0
+for num in range(1, 101):
+    if num % 3 == 0 or num % 7 == 0:
+        continue
+    contador = contador + 1
+
+print('Cantidad de números:', contador)
+print('(El resultado debe ser 57)')
+
+# Punto 15 - Ejercicio 5: Años no bisiestos de 1600 a 2400
+
+for anio in range(1600, 2401):
+    # Si es bisiesto, saltarlo con continue
+    if (anio % 4 == 0) and (anio % 100 != 0 or anio % 400 == 0):
+        continue
+    print(anio)
+
+# Punto 15 - Ejercicio 6: Cambiar espacios por guiones bajos
+
+frase = 'Hola, mundo. Me llamo Python y sé como hablar con la a.'
+
+for letra in frase:
+    if letra == ' ':
+        print('_', sep='', end='')
+        continue
+    print(letra, sep='', end='')
+
+print()  # Nueva línea al final
+
+# Punto 15 - Ejercicio 7: Cambiar todas las vocales por 'a'
+
+frase = 'Hola, mundo! Me llamo Python y sé como hablar con la a.'
+
+for letra in frase:
+    if letra in 'aeiouAEIOUáéíóúÁÉÍÓÚ':
+        print('a', sep='', end='')
+        continue
+    print(letra, sep='', end='')
+
+print()  # Nueva línea al final
